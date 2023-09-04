@@ -1,0 +1,137 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: poppins, sans-serif;
+}
+
+.calculator-wrapper {
+   width: 100vw;
+   height: 100vh;
+   background: #eee;
+   display: grid;
+   place-content: center;
+}
+
+.calculator-wrapper form {
+   padding: 1.2em;
+   border-radius: 10px;
+   background: #3b3b3b;
+   box-shadow: inset 15px 15px 20px #666565,
+                0px 5px 10px #666565;
+}
+
+.calculator-wrapper form .display {
+   display: flex;
+   align-items: flex-start;
+}
+
+.calculator-wrapper form .display input {
+   flex: 1;
+   height: 60px;
+   border-radius: 10px;
+   border: 0;
+   box-shadow: inset 10px 10px 15px #928c8c;
+   text-align: right;
+   padding: 0 10px;
+   font-size: 1.4rem;
+   font-weight: 600;
+   letter-spacing: 3px;
+}
+
+.calculator-wrapper form .display input.error {
+   color: red;
+   font-weight: bolder;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.calculator-wrapper form div {
+   margin: 10px 10px;
+   margin-top: 20px;
+}
+
+.calculator-wrapper form div:nth-child(1) button,
+.calculator-wrapper form div:nth-child(2) button:last-child,
+.calculator-wrapper form div:nth-child(4) button:last-child,
+.calculator-wrapper form div:nth-child(5) button:last-child,
+.calculator-wrapper form div:nth-child(6) button:last-child{
+   color: red;
+   font-weight: bolder;
+   font-size: 1.4rem;
+}
+
+.calculator-wrapper form .buttons div:last-child button:last-child {
+   width: 145px;
+   border-radius: 2rem;
+}
+
+.calculator-wrapper form .buttons button {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   font-size: 1.2rem;
+   font-weight: bold;
+   border: 0;
+   margin: 0 10px;
+   background: #e6d3d3;
+   box-shadow: inset 10px 10px 15px #928c8c;
+   cursor: pointer;
+   color: rgb(79, 79, 172);
+}
+
+.calculator-wrapper form .buttons button:active {
+   box-shadow: inset -10px -10px 15px #928c8c;
+}
+
+
+@media (max-width: 410px) {
+
+   .calculator-wrapper form .buttons button {
+      width: 53px;
+      height: 53px;
+      font-size: 1.1rem;
+   }
+
+   .calculator-wrapper form {
+      padding: .7em;
+      border-radius: 8px;
+      background: #3b3b3b;
+      box-shadow: inset 15px 15px 20px #666565,
+                   0px 5px 10px #666565;
+   }
+
+   .buttons {
+      width: fit-content;
+      margin-left: 2rem;
+   }
+
+   .buttons div {
+      margin-left: 3rem;
+   }
+
+   .buttons div:first-child {
+      margin-top: 0;
+   }
+
+   .calculator-wrapper form .display input {
+      height: 50px;
+   }
+
+   .calculator-wrapper form .buttons div:last-child button:last-child {
+      width: 139px;
+      border-radius: 2rem;
+   }
+
+}
+
+@media (max-width: 380px) {
+
+   .calculator-wrapper form .buttons button {
+      margin: 5px 5px;
+   }
+
+   .calculator-wrapper form div {
+      margin: 5px 5px;
+   }
+}
